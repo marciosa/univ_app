@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
+    skip_before_action :require_user, only: [:new, :create]
     before_action :set_student, only: [:show, :edit, :update]
+    before_action :require_same_student, only: [:edit, :update]
     
     def index
         @students = Student.all
@@ -27,8 +29,7 @@ class StudentsController < ApplicationController
         
     end
 
-    def update
-        
+    def update        
         if @student.update(student_params)
             flash[:notice] = "You have successfully updated your pfofile"
             redirect_to @student
@@ -45,6 +46,13 @@ class StudentsController < ApplicationController
 
     def student_params
         params.require(:student).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def require_same_student
+        if current_user != @student
+            flash[:notice] = "You can only edit your profile"
+            redirect_to student_path(current_user)
+        end
     end
 
 end
