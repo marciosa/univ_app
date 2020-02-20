@@ -1,5 +1,12 @@
 # README
 
+*************************************************
+
+From Udemy Course: JavaScript and Ruby on Rails with React, Angular, and Vue - Section 3 about Intro to Ruby on Rails
+
+*************************************************
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
