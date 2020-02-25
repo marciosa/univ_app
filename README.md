@@ -2,7 +2,7 @@
 
 *************************************************
 
-From Udemy Course: JavaScript and Ruby on Rails with React, Angular, and Vue - Section 3 about Intro to Ruby on Rails
+From Udemy Course: JavaScript and Ruby on Rails with React, Angular, and Vue - Section 3 about Intro to Ruby on Rails.
 
 *************************************************
 
